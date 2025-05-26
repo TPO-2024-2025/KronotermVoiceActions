@@ -29,7 +29,7 @@ Odprite terminal ali ukazno vrstico **na vašem računalniku** (kjer imate shran
 Kreiranje mape custom_components:
 ```bash
 shh -m hmac-sha2-512-etm@openssh.com root@<HA_IP_NASLOV>
-cd config
+cd /config
 mkdir custom_components
 ```
 Kopiranje integracije:
