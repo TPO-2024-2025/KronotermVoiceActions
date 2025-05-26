@@ -1,11 +1,26 @@
 # Kronoterm Voice Actions
 
+## Pregled
+
+Ta dodatek omogoča glasovno upravljanje vaše Kronoterm črpalke preko Home Assistant. Uporablja **Whisper** za prepoznavanje govora in **Piper** za sintezo govora, kar omogoča interakcijo s sistemom Kronoterm preko naravnega jezika.
+
+[![Video](https://img.youtube.com/vi/jNl_yXXjG2U/hqdefault.jpg)](https://youtu.be/jNl_yXXjG2U)
+
 ## Predpogoji
 
 * Delujoča namestitev **Home Assistant OS** ali **Home Assistant Supervised**. Ta dodatek **ne deluje** z metodo namestitve "Home Assistant Container", ker nima sistema za upravljanje dodatkov (Supervisor).
 * Nameščen in delujoč **Whisper Add-on**, povezan z vašim Home Assistantom. Namestitev iz trgovine z dodatki (`Settings` > `Add-ons` > `Add-on Store`).
 * Nameščen in delujoč **Piper Add-on** (neobvezno, vendar priporočljivo), povezan z vašim Home Assistantom. Namestitev iz trgovine z dodatki (`Settings` > `Add-ons` > `Add-on Store`).
 * Naložena koda iz tega repozitorija.
+
+## Funkcionalnosti
+
+* **Glasovno upravljanje**: Omogoča glasovno upravljanje vaših Kronoterm črpalk preko Home Assistant.
+* **Podpora za slovenski jezik**: Integracija podpira slovenski jezik, kar omogoča naravno interakcijo.
+* **100% lokalno**: Vse operacije se izvajajo lokalno, brez potrebe po zunanjih strežnikih ali internetni povezavi.
+* **Povratna informacija**: Integracija omogoča povratno informacijo, kar pomeni, da lahko sistem odgovori na vaše ukaze in vprašanja.
+
+![Primer pogovora](/assets/image4.png "Primer pogovora")
 
 ## Ročna namestitev
 
@@ -89,3 +104,7 @@ Lahko se povežete na Home Assistant preko SSH (`ssh vase_ssh_uporabnisko_ime@<H
 
 3. **Začetek pogovora**
     * Pojdite v `Settings` > `Voice assistants` in kliknite `Add assistant`. Izberite ime in nastavite jezik na `Slovenian`. Nato za `Conversation Conversation Agent` izberite `Kronoterm Agent`. Za `Speech-to-text` izberite `faster-whisper`. V primeru da imate naložen **Piper** ga lahko izberete za `Text-to-speech`.
+
+![Kronoterm Wyoming](/assets/image.png "Kronoterm Wyoming")
+![Assistant setup1](/assets/image2.png "Assistant setup1")
+![Assistant setup2](/assets/image3.png "Assistant setup2")
