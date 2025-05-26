@@ -1,7 +1,3 @@
-# :computer: Izvorna koda projekta
-
-V tej mapi se nahaja izvorna koda dodatka "Kronoterm Voice Control".
-
 # Namestitev v Home Assistant
 
 Ta navodila opisujejo, kako namestiti Addon v vaš Home Assistant sistem.
