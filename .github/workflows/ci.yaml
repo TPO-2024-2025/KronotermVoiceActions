@@ -6,7 +6,6 @@ on:
 
 env:
     HA_VERSION: "2025.5.3"
-    HAOS_PROJECT_WORKSPACE: /tmp/kronoterm_voice_actions_ci_workspace
 
 jobs:
     # ───────────────────────── Unit tests (GitHub Runner) ──────────────────────────
@@ -32,7 +31,7 @@ jobs:
             - name: Run unit tests + coverage
               run: |
                   # Run pytest specifically on the 'test' directory
-                  pytest -v --cov=src/kronoterm_voice_actions --cov-report=xml src/kronoterm_voice_actions/test/
+                  pytest -v --cov=custom_components/kronoterm_voice_actions --cov-report=xml custom_components/kronoterm_voice_actions/test/
 
     # ──────────────────────── deploy ─────────────────────────
     deploy:
@@ -45,7 +44,7 @@ jobs:
 
             - name: Sync integration to HAOS
               run: |
-                  rsync -az src/kronoterm_voice_actions/ \
+                  rsync -az custom_components/kronoterm_voice_actions/ \
                         haos:/config/custom_components/
 
             - name: Restart Home Assistant

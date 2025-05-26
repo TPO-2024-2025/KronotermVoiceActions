@@ -16,7 +16,7 @@ dependencies    = [
 ]
 
 [tool.setuptools]
-package-dir = {"" = "src"}
+package-dir = {"" = "custom_components"}
 packages = [
     "kronoterm_voice_actions",
     "kronoterm_voice_actions.wyoming",
@@ -33,6 +33,5 @@ test = [
     "pymodbus",
     "rapidfuzz",
     "unidecode",
-    "pyserial",
-    "ffmpeg-python"
+    "pyserial"
 ]
