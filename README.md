@@ -33,6 +33,7 @@ Kreiranje mape custom_components:
 ```bash
 shh -m hmac-sha2-512-etm@openssh.com root@<HA_IP_NASLOV>
 cd /config
+cd /config
 mkdir custom_components
 ```
 Kopiranje integracije:
@@ -40,6 +41,8 @@ Kopiranje integracije:
 scp -o MACs=hmac-sha2-512-etm@openssh.com -r /pot/do/mape/kronoterm_voice_actions/wyoming root@<HA_IP_NASLOV>:/config/custom_components/
 ```
 
+* *(Primer: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r C:\Projekti\Projekt-16\custom_components\kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
+* *(Primer za Linux/macOS: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r ~/Downloads/Projekt-16/custom_components/kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
 * *(Primer: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r C:\Projekti\Projekt-16\custom_components\kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
 * *(Primer za Linux/macOS: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r ~/Downloads/Projekt-16/custom_components/kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
 
