@@ -1,0 +1,22 @@
+{
+  "domain": "wyoming",
+  "name": "Kronoterm Wyoming",
+  "config_flow": true,
+  "dependencies": [
+    "assist_satellite",
+    "assist_pipeline",
+    "stt",
+    "intent",
+    "conversation",
+    "ffmpeg"
+  ],
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "requirements": [
+    "wyoming==1.5.4",
+    "rapidfuzz",
+    "unidecode"
+  ],
+  "zeroconf": ["_wyoming._tcp.local."],
+  "version": "0.1.0"
+}

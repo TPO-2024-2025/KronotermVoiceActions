@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = ">=2.32.3"
+python-dotenv = ">=1.0.1"
+ruff = ">=0.6.4"
+bumpver = ">=2023.1129"
+pytest = ">=8.3.3"
+build = "==1.2.2"
+twine = ">=5.1.1"
+pydoc-markdown = ">=4.8.2"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+python_full_version = "3.12.3"

@@ -1,0 +1,38 @@
+[build-system]
+requires      = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name            = "kronoterm_voice_actions"
+version         = "0.1.0"
+description     = "Home Assistant custom integration for Kronoterm voice actions"
+readme          = "README.md"
+requires-python = ">=3.13"
+dependencies    = [
+    "wyoming==1.5.4",
+    "rapidfuzz",
+    "unidecode",
+    "pymodbus"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = [
+    "kronoterm_voice_actions",
+    "kronoterm_voice_actions.wyoming",
+    "kronoterm_voice_actions.test",
+]
+
+[project.optional-dependencies]
+dev  = ["ruff", "black", "pre-commit"]
+test = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-homeassistant-custom-component",
+    "coverage",
+    "pymodbus",
+    "rapidfuzz",
+    "unidecode",
+    "pyserial",
+    "ffmpeg-python"
+]

@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]    # fire only when you push a version tag
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build HACS-style ZIP
+      run: |
+        version=${GITHUB_REF#refs/tags/}
+        mkdir -p bundle/custom_components
+        # Copy your package into the expected HACS path
+        rsync -a src/kronoterm_voice_actions \
+                 bundle/custom_components/kronoterm_voice_actions
+        (cd bundle && zip -r kronoterm_voice_actions-${version}.zip custom_components)
+
+    - name: Publish GitHub Release
+      uses: softprops/[email protected]
+      with:
+        tag_name: ${{ github.ref }}           # uses the tag you pushed
+        files: bundle/kronoterm_voice_actions-*.zip
