@@ -37,8 +37,8 @@ Kopiranje integracije:
 scp -o MACs=hmac-sha2-512-etm@openssh.com -r /pot/do/mape/kronoterm_voice_actions/wyoming root@<HA_IP_NASLOV>:/config/custom_components/
 ```
 
-* *(Primer: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r C:\Projekti\Projekt-16\src\kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
-* *(Primer za Linux/macOS: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r ~/Downloads/Projekt-16/src/kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
+* *(Primer: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r C:\Projekti\Projekt-16\custom_components\kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
+* *(Primer za Linux/macOS: `scp -o MACs=hmac-sha2-512-etm@openssh.com -r ~/Downloads/Projekt-16/custom_components/kronoterm_voice_actions/wyoming root@192.168.1.100:/config/custom_components/`)*
 
 * Vpisati boste morali geslo za SSH (ali pa bo uporabljen vaš SSH ključ, če je tako nastavljeno).
 * Parameter `-r` zagotovi, da se skopira celotna mapa z vsebino.
@@ -61,8 +61,6 @@ Ko ste uspešno skopirali mapo `kronoterm_voice_actions/wyoming`:
     * Osvežite stran v brskalniku (npr. Ctrl+F5 v Windows/Linux, Cmd+Shift+R v macOS), da Home Assistant ponovno preveri lokalne dodatke.
 3. **Namestite pogovornega agenta:**
     * Pojdite v `Settings` > `Devices & services` in desno spodaj izberite `Add integration`. Poiščite `Kronoterm Wyoming`.. Kliknite nanj in izberite `Setup another instance of Kronoterm Wyoming` in končno izberite `Set up the custom Kronoterm conversation agent`.
-    Vpišite uporabniško ime in geslo za **Kronoterm Cloud**.
-    * Kliknite gumb **Add**.
 4. **Namestite STT in TTS integracij:**
     * Vrnite se v `Devices & services`.
     * Vaša integracija **Kronoterm Wyoming - Whisper** ali pa **Piper** bi se moral pojaviti avtomatično.
